@@ -1,8 +1,8 @@
 # cicd_terraform_azure
 
-### Azure Resources with Terraform
+# Azure Resources with Terraform
 
-# Objective
+## Objective
 
 The main objective of this code is to create a CSV file in storage account and run ADF taking that CSV file as a source and copy the content and output to another CSV file within Azure blob storage all using terraform in azure.
 
