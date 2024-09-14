@@ -1,8 +1,24 @@
 # cicd_terraform_azure
 
-# Azure Resources with Terraform
+### Azure Resources with Terraform
 
-In this repository, I have created two Terraform modules. I have updated `main.tf`, `variables.tf` files, and after executing the code, it will create the following resources in Microsoft Azure. We can define variables in a separate file and pass them while running `terraform apply -var-file=variables.tfvars` to use the variables in the following modules.
+# Objective
+
+The main objective of this code is to create a CSV file in storage account and run ADF taking that CSV file as a source and copy the content and output to another CSV file within Azure blob storage all using terraform in azure.
+
+First I executed `az login` to sign into my Azure credentials. In main.tf I have written 
+```
+provider "azurerm" {
+  features  {}
+}
+```
+which is responsible for handling my Microsoft Azure login credentials.
+
+In this repository, I have created two Terraform modules: 
+   a. Storage Account Module
+   b. Azure Data Factory
+   
+I have updated `main.tf`, `variables.tf` files, and after executing the code, it will create the following resources in Microsoft Azure. 
 
 ### Resources Created
 
@@ -25,6 +41,11 @@ In this repository, I have created two Terraform modules. I have updated `main.t
 2. `resource_group_name`
 3. `location`
 4. `storage_account_name`
+
+
+
+We can define variables in a separate file and pass them while running `terraform apply -var-file=variables.tfvars` to use the variables in the following modules.
+
 
 ## Steps to Execute
 
