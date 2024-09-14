@@ -35,4 +35,6 @@ variable "container_access_type" {
 variable "adf_name" {
     description = "The tags associated with your resource"
     type = string   
+
+
 }
